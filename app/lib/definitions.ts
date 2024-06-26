@@ -9,6 +9,13 @@ export type User = {
   password: string;
 };
 
+export type product = {
+  id: string;
+  name: string;
+  category: string;
+  stock: number;
+};
+
 export type Customer = {
   id: string;
   name: string;
@@ -80,9 +87,9 @@ export type CustomerField = {
   name: string;
 };
 
-export type InvoiceForm = {
+export type ProductForm = {
   id: string;
-  customer_id: string;
-  amount: number;
-  status: 'pending' | 'paid';
+  name: string;
+  stock: number;
+  category: string;
 };

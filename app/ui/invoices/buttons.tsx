@@ -13,16 +13,18 @@ export function CreateInvoice() {
   );
 }
 
-export function UpdateInvoice({ id }: { id: string }) {
+export function UpdateProduct({ id }: { id: string }) {
   return (
-    <Link
-      href="/dashboard/invoices"
-      className="rounded-md border p-2 hover:bg-gray-100"
-    >
-      <PencilIcon className="w-5" />
-    </Link>
+    <div className="relative">
+      <Link href={`/dashboard/${id}/Editar`}>
+        <div className="absolute top-2 right-2">
+          <PencilIcon className="w-5" />
+        </div>
+      </Link>
+    </div>
   );
 }
+
 
 export function DeleteInvoice({ id }: { id: string }) {
   return (
@@ -34,3 +36,4 @@ export function DeleteInvoice({ id }: { id: string }) {
     </>
   );
 }
+
